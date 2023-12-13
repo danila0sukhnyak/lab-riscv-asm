@@ -7,7 +7,7 @@ matrix:
     .word 1, 1, 1, 1
     .word 2, 2, 2, 2
 result:
-    .word 0, 0
+    .word 0
 
 .text
 .globl main
