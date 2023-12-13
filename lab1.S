@@ -17,7 +17,7 @@ main:
     la a3, M
     la a4, matrix
     call process
-    mv a2, a0  # Переместите итоговую сумму в a2 для вывода
+    mv a2, a0  
     call print
     call exit
 
