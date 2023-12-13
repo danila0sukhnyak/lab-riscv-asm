@@ -4,10 +4,10 @@ N:
 M:
     .word 2
 matrix:
-    .word 1, 1, 1, 1
-    .word 2, 2, 2, 2
+    .word 1, -2, 3, 1
+    .word 2, 2, 1, 2
 result:
-    .word 0, 0
+    .word 0
 
 .text
 .globl main
@@ -17,13 +17,13 @@ main:
     la a3, M
     la a4, matrix
     call process
-    mv a2, a0  # Переместите итоговую сумму в a2 для вывода
+    mv a2, a0  
     call print
     call exit
 
 print:
     # Вывод значения в a2
-    addi a0, x0, 1  # print_int ecall
+    addi a0, x0, 1  
     mv a1, a2
     ecall
     ret
